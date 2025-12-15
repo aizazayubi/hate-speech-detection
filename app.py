@@ -1,4 +1,3 @@
-# Hate Speech Detection Pipeline for Khowar / Pashto (Skeleton)
 
 import torch
 from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
@@ -6,18 +5,16 @@ from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassifica
 # ---------- ASR ----------
 asr_khowar = pipeline(
     "automatic-speech-recognition",
-    model="your-org/khowar-asr-model"
+    model="huggingface.com/aizazayyubi/models/khowar-asrl"
 )
 
 asr_pashto = pipeline(
     "automatic-speech-recognition",
-    model="your-org/pashto-asr-model"
+    model="huggingface.com/aizazayuubi/models/pashto-asr"
 )
 
 # ---------- Language ID (optional placeholder) ----------
 def detect_language(audio_path):
-    # simple rule-based / external model hook
-    # return "khowar" or "pashto"
     return "khowar"
 
 # ---------- Hate Speech Classifier ----------
